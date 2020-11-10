@@ -170,11 +170,11 @@ if(check_value2==1){
 		if(checkval==1){
 			int checkval1=1;	
 			for(int i=0;i<Columsize1;i++){
-				checkval1=checkval1*(addi[i]<=available[i]);
+				checkval1=checkval1*(addi[i]<=available[processnum][i]);
 			}
 			if(checkval==1){
 				for(int i=0;i<Columsize1;i++){
-				available[i]=available[i]-addi[i];
+				available[processnum][i]=available[processnum][i]-addi[i];
 				allocation[processnum][i]=allocation[processnum][i]+addi[i];
 				need[processnum][i]=need[processnum][i]-addi[i];
 				goto step2;
